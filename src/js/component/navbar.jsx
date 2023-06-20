@@ -1,12 +1,12 @@
 import React from "react";
 
-const Navbar = (props) => {
+const Navbar = ({ empresa, home, about, services, contact }) => {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg bg-black text-white ">
-        <div className="container-fluid ">
-          <a className="navbar-brand text-white" href="#">
-            {props.empresa}
+      <nav className="navbar navbar-expand-lg bg-black text-white   ">
+        <div className="container ">
+          <a className="navbar-brand text-white " href="#">
+            {empresa}
           </a>
           <button
             className="navbar-toggler bg-white  "
@@ -19,29 +19,32 @@ const Navbar = (props) => {
           >
             <span className="navbar-toggler-icon "></span>
           </button>
-          <div className="collapse navbar-collapse text-white " id="navbarNav">
+          <div
+            className="collapse navbar-collapse text-white  justify-content-end"
+            id="navbarNav"
+          >
             <ul className="navbar-nav  ">
               <li className="nav-item  ">
                 <a
-                  className="nav-link active text-white "
+                  className="nav-link active text-white  "
                   aria-current="page"
                   href="#"
                 >
-                  {props.home}
+                  {home}
                 </a>
               </li>
               <li className="nav-item">
                 <a className="nav-link text-white" href="#">
-                  {props.about}
+                  {about}
                 </a>
               </li>
               <li className="nav-item">
                 <a className="nav-link text-white" href="#">
-                  {props.services}
+                  {services}
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-white ">{props.contact}</a>
+                <a className="nav-link text-white ">{contact}</a>
               </li>
             </ul>
           </div>
